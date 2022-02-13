@@ -1,0 +1,116 @@
+<!-- asdf.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <slot name="asdf" />
+</head>
+<body>
+    <slot />
+</body>
+</html>
+
+
+<!-- qwer.html -->
+<outer-nonsense></outer-nonsense>
+<use src="asdf.html">
+
+    <fill name="asdf">
+        asdf asdf asdf asdf
+
+        <slot />
+
+    </fill>
+
+    <otherthings></otherthings>
+    <imiage src="" />
+</use>
+<outer-nonsense></outer-nonsense>
+
+
+<!-- froppl.html -->
+<thingy>
+    <use src="qwer.html">
+        asdf2 asdf2
+    </use>
+</thingy>
+
+
+<!-- 1: replace use in froppl with qwer, replace slot(s) in qwer with froppl inner -->
+<thingy>
+    <outer-nonsense></outer-nonsense>
+    <use src="asdf.html">
+    
+        <fill name="asdf">
+            asdf asdf asdf asdf
+    
+            <slot />
+    
+        </fill>
+    
+        <otherthings></otherthings>
+        <imiage src="" />
+    </use>
+    <outer-nonsense></outer-nonsense>
+</thingy>
+
+<!-- 2: replace slot with inner of use -->
+<thingy>
+    <outer-nonsense></outer-nonsense>
+    <use src="asdf.html">
+    
+        <fill name="asdf">
+            asdf asdf asdf asdf
+    
+            asdf2 asdf2
+    
+        </fill>
+    
+        <otherthings></otherthings>
+        <imiage src="" />
+    </use>
+    <outer-nonsense></outer-nonsense>
+</thingy>
+
+<!-- 3: replace next use -->
+<thingy>
+    <outer-nonsense></outer-nonsense>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <slot name="asdf" />
+    </head>
+    <body>
+        <slot />
+    </body>
+    </html>
+    <outer-nonsense></outer-nonsense>
+</thingy>
+
+<!-- 4: replace next slots -->
+<thingy>
+    <outer-nonsense></outer-nonsense>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        asdf asdf asdf asdf
+
+        asdf2 asdf2
+
+    </head>
+    <body>
+    
+        <otherthings></otherthings>
+        <imiage src="" />
+    </body>
+    </html>
+    <outer-nonsense></outer-nonsense>
+</thingy>

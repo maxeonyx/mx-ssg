@@ -1,4 +1,6 @@
-# [Building a static site generator in 100 lines of Rust](https://kerkour.com/blog/rust-static-site-generator)
+# mx-ssg -- Max's Static Site Generator
+
+From [Building a static site generator in 100 lines of Rust](https://kerkour.com/blog/rust-static-site-generator)
 
 
 ```shell
