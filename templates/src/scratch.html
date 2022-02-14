@@ -1,0 +1,201 @@
+<!-- index.html -->
+<mx-use src="inner_layout.template.html">
+  <mx-fill name="head">
+    <title>Test Title</title>
+  </mx-fill>
+
+  <h1>Test Header</h1>
+
+  <mx-use src="table.template.html" />
+  <mx-use src="table.template.html" />
+</mx-use>
+
+<!-- inner_layout.template.html -->
+<mx-use src="layout.template.html">
+  <mx-fill name="head">
+    <mx-slot name="head" />
+  </mx-fill>
+  <header></header>
+  <main>
+    <article>
+      <mx-slot />
+    </article>
+  </main>
+  <footer></footer>
+</mx-use>
+
+<!-- layout.template.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <mx-slot name="head" />
+  </head>
+  <body>
+    <mx-slot />
+  </body>
+</html>
+
+<!-- table.template.html -->
+<p>Table below</p>
+<table>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+</table>
+
+<!-- 1: index.html -->
+<mx-use src="inner_layout.template.html">
+  <mx-fill name="head">
+    <title>Test Title</title>
+  </mx-fill>
+
+  <h1>Test Header</h1>
+
+  <mx-use src="table.template.html" />
+  <mx-use src="table.template.html" />
+</mx-use>
+
+<!-- 2: replace use with template -->
+<mx-use src="layout.template.html">
+  <mx-fill name="head">
+    <mx-slot name="head" />
+  </mx-fill>
+  <header></header>
+  <main>
+    <article>
+      <mx-slot />
+    </article>
+  </main>
+  <footer></footer>
+</mx-use>
+
+<!-- 3: replace slots with fills -->
+<mx-use src="layout.template.html">
+  <mx-fill name="head">
+    <title>Test Title</title>
+  </mx-fill>
+  <header></header>
+  <main>
+    <article>
+      <h1>Test Header</h1>
+
+      <mx-use src="table.template.html" />
+      <mx-use src="table.template.html" />
+    </article>
+  </main>
+  <footer></footer>
+</mx-use>
+
+<!-- 4: replace use with template -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <mx-slot name="head" />
+  </head>
+  <body>
+    <mx-slot />
+  </body>
+</html>
+
+<!-- 5: replace slots with fills -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Title</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <article>
+        <h1>Test Header</h1>
+
+        <mx-use src="table.template.html" />
+        <mx-use src="table.template.html" />
+      </article>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+
+<!-- 6: replace use with template -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Title</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <article>
+        <h1>Test Header</h1>
+
+        <p>Table below</p>
+        <table>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+          </tr>
+        </table>
+        <mx-use src="table.template.html" />
+      </article>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+
+<!-- 7: replace use with template -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Title</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <article>
+        <h1>Test Header</h1>
+
+        <p>Table below</p>
+        <table>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+          </tr>
+        </table>
+        <p>Table below</p>
+        <table>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+          </tr>
+        </table>
+      </article>
+    </main>
+    <footer></footer>
+  </body>
+</html>
