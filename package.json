@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dom-serializer": "^1.3.2",
     "domhandler": "^4.3.0",
     "htmlparser2": "^7.2.0",
     "node-html-parser": "^5.2.0"
